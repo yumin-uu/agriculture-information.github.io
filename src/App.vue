@@ -1,15 +1,20 @@
 <template>
   <div>
-    <el-button>aaa</el-button>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
-
-}
+  created () {
+    this.getInfo()
+  },
+  methods: {
+    ...mapMutations(["getInfo"]),
+  },
+};
 </script>
 
 <style>
-
 </style>
