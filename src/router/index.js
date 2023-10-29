@@ -58,7 +58,10 @@ const routes = [
 // 创建路由
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  // 设置路由模式   (地址栏的展示方式)
+  // 1. hash     默认的   锚点 # 的展示方式
+  // 2. history  浏览器历史记录的展示方法
+  mode: 'hash'
 })
 
 // 路由导航守卫 (路由前置守卫)
